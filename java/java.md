@@ -1,39 +1,25 @@
 # Java
 
+
 #### Sources  
 https://en.wikipedia.org/wiki/Java_(programming_language)
 
 * Language purpose/genesis
   * Why was the language created?
-    * Java was originally created for interactive television, but it was ahead of its time.
-    * The first release (Java 1.0) came out in 1995 and featured a fair amount of security as well as network and file access restrictions.
-    * Many web browsers added Java compatibility so it was possible to run Java applets within web pages.
+    * Java was originally created for interactive television.
     * Java was originally called "Oak," then it changed to "Green" and finally ended up as "Java."
     * There were 5 goals for the language:
       1. It must be "simple, object-oriented, and familiar"
       2. It must be "robust and secure"
-      3. It must be "architecture-neutral and portable"
-      4. It must execute with "high performance"
-      5. It must be "interpreted, threaded and dynamic"
+      3.
   * What problems was the language trying to address?
-    * Java's bytecode strategy was meant to let programmers "write once, run anywhere." As a result, compiled Java code is platform-independent (as long as that system supports Java, via a JRE with a JVM).
+    * Java's bytecode strategy was meant to let programmers "write once, run anywhere." As a result, compiled Java code is platform-independent (as long as that system supports Java, via a JVM).
   * Is the language a reaction to a previous language or a replacement for another language?
-    * Java took a lot of its syntax from C and C++, but was not meant to handle all of the low-level operations they could perform. 
-    * Unlike C and C++ however, Java compiles to bytecode that is meant to be run on a JVM. This way, any machine can run the program as long as it supports Java.
-    * Java doesn't do low-level operations as well as C or C++, but the Java API allows it to do much higher-level things with ease.
 * Unique features of the language
   * Does the language have any particularly unique features?
-    * Java bytecode
-    * Java API
-    * Lambda expressions
-    * Popular for client-server applications
-    * Java applications and Java web applets
-    * Garbage collection
 * Name spaces
   * How are name spaces implemented?
-    * Java implements namespaces by organizing objects within packages.
   * How are name spaces used?
-    * At the top of a class, the first line specifies what package the class belongs to. Packages also offer one way to handle access control. For example, to restrict code to package-only, use the default modifier.
 * Types
     * What types does the language support?
     * Are both reference and value types supported?
@@ -78,6 +64,39 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
   * Does the language support procedural programming?
 * Functional programming
   * Does the language support functional programming?
+    * Test
 * Multithreading
   * Threads or thread-like abilities
+    * Java supports multi-threaded applications
+    * Because of how Java is run (inside the JVM), it actually is multi-threaded by default (i.e. the JVM is one thread and your program is another).
   * How is multitasking accomplished?
+    * Java implements multitasking in two ways:
+      1. Implement the `Runnable` interface:
+        ```java
+        class RunnableExample implements Runnable {
+
+            public void run() {
+                //do something in a thread
+            }
+
+            public static void main(String args[]) {
+                new RunnableExample().start();
+            }
+        }
+        ```
+      2. Extend the `Thread` class:
+        ```java
+        class ThreadExample extends Thread {
+
+            public void run() {
+                //do something in a thread
+            }
+
+            public static void main(String args[]) {
+                new ThreadExample().start();
+            }
+        }
+        ```
+
+  #### Jon's Sources
+  https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html
