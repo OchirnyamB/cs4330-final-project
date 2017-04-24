@@ -56,4 +56,5 @@
   * Does the language support functional programming?
 * Multithreading
   * Threads or thread-like abilities
+    * Java supports multi-threaded applications
   * How is multitasking accomplished?
