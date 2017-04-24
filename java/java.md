@@ -54,11 +54,13 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
 Defining a class:
   ```java
   public class Car {
+      // Instance variables
       public String make;
       public String model;
       public int year;
       public int speed;
 
+      // Constructor
       public Car(String make, String model, int year) {
           this.make = make;
           this.model = model;
@@ -66,10 +68,12 @@ Defining a class:
           this.speed = 0;
       }
 
+      // Method
       public int accelerate(int amount) {
           this.speed += amount;
       }
 
+      // Method
       public int decelerate(int amount) {
           this.speed -= amount;
       }
