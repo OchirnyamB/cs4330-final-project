@@ -3,6 +3,7 @@
 * Language purpose/genesis
   * Why was the language created?
   * What problems was the language trying to address?
+    * Java's bytecode strategy was meant to let programmers "write once, run anywhere." As a result, compiled Java code is platform-independent.
   * Is the language a reaction to a previous language or a replacement for another language?
 * Unique features of the language
   * Does the language have any particularly unique features?
