@@ -2,3 +2,8 @@
 
 ### Description  
 https://github.com/dalemusser/OOLanguageComparison
+
+### Languages
+* Java
+* Python
+* C++
