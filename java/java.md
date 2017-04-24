@@ -53,11 +53,11 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
 
 Defining a class:
   ```java
-  class Car {
-      String make;
-      String model;
-      int year;
-      int speed;
+  public class Car {
+      public String make;
+      public String model;
+      public int year;
+      public int speed;
 
       public Car(String make, String model, int year) {
           this.make = make;
