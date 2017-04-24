@@ -1,7 +1,7 @@
 # Java
 
 
-#### Sources  
+#### Chris's Sources  
 https://en.wikipedia.org/wiki/Java_(programming_language)
 
 * Language purpose/genesis
@@ -35,8 +35,11 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
     * At the top of a class, the first line specifies what package the class belongs to. Packages also offer one way to handle access control. For example, to restrict code to package-only, use the default modifier.
 * Types
     * What types does the language support?
+      * There are 8 primitive data types: byte, short, int, long, float, double, boolean, char
     * Are both reference and value types supported?
+      * Yes. Primitive data types are passed by value (unless you send the address), and objects are passed by reference.
     * Can new value types be created?
+      * Yes. You can create enumerations and classes that include state information.
 * Classes
   * Defining
   * Creating new instances
