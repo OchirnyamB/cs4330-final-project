@@ -11,7 +11,7 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
     * There were 5 goals for the language:
       1. It must be "simple, object-oriented, and familiar"
       2. It must be "robust and secure"
-      3. 
+      3.
   * What problems was the language trying to address?
     * Java's bytecode strategy was meant to let programmers "write once, run anywhere." As a result, compiled Java code is platform-independent (as long as that system supports Java, via a JVM).
   * Is the language a reaction to a previous language or a replacement for another language?
@@ -67,4 +67,37 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
 * Multithreading
   * Threads or thread-like abilities
     * Java supports multi-threaded applications
+    * Because of how Java is run (inside the JVM), it actually is multi-threaded by default (i.e. the JVM is one thread and your program is another).
   * How is multitasking accomplished?
+    * Java implements multitasking in two ways:
+      1. Implement the `Runnable` interface
+        * Example:
+        ```java
+        class RunnableExample implements Runnable {
+
+            public void run() {
+                //do something in a thread
+            }
+
+            public static void main(String args[]) {
+                new RunnableExample().start();
+            }
+        }
+        ```
+      2. Extend the `Thread` class
+        * Example:
+        ```java
+        class ThreadExample extends Thread {
+
+            public void run() {
+                //do something in a thread
+            }
+
+            public static void main(String args[]) {
+                new ThreadExample().start();
+            }
+        }
+        ```
+
+  #### Jon's Sources
+  https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html
