@@ -42,9 +42,45 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
       * Yes. You can create enumerations and classes that include state information.
 * Classes
   * Defining
+    * Classes have state and behavior, in the form of instance variables and methods.
   * Creating new instances
+    * You create a new object with the `new` keyword.
   * Constructing/initializing
+    * Every class has a constructor. If you do not explicitly write a constructor, there is a default constructor that takes no arguments.
+    * If you explicitly define a no-arg constructor, the default constructor disappears.
   * Destructing/de-initializing
+    * Java's garbage collector automatically destroys an object when there are no longer any references to it.
+
+Defining a class:
+  ```java
+  class Car {
+      String make;
+      String model;
+      int year;
+      int speed;
+
+      public Car(String make, String model, int year) {
+          this.make = make;
+          this.model = model;
+          this.year = year;
+          this.speed = 0;
+      }
+
+      public int accelerate(int amount) {
+          this.speed += amount;
+      }
+
+      public int decelerate(int amount) {
+          this.speed -= amount;
+      }
+  }
+  ```
+
+Instantiating a class:
+  ```java
+  Car car = new Car("Volvo", "s60", 2012);
+  ```
+
 * Instance reference name in data type (class)
   * this?  self?
 * Properties
