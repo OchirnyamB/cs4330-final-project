@@ -42,9 +42,49 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
       * Yes. You can create enumerations and classes that include state information.
 * Classes
   * Defining
+    * Classes have state and behavior, in the form of instance variables and methods.
   * Creating new instances
+    * You create a new object with the `new` keyword.
   * Constructing/initializing
+    * Every class has a constructor. If you do not explicitly write a constructor, there is a default constructor that takes no arguments.
+    * If you explicitly define a no-arg constructor, the default constructor disappears.
   * Destructing/de-initializing
+    * Java's garbage collector automatically destroys an object when there are no longer any references to it.
+
+Defining a class:
+  ```java
+  public class Car {
+      // Instance variables
+      public String make;
+      public String model;
+      public int year;
+      public int speed;
+
+      // Constructor
+      public Car(String make, String model, int year) {
+          this.make = make;
+          this.model = model;
+          this.year = year;
+          this.speed = 0;
+      }
+
+      // Method
+      public int accelerate(int amount) {
+          this.speed += amount;
+      }
+
+      // Method
+      public int decelerate(int amount) {
+          this.speed -= amount;
+      }
+  }
+  ```
+
+Instantiating a class:
+  ```java
+  Car car = new Car("Volvo", "s60", 2012);
+  ```
+
 * Instance reference name in data type (class)
   * this?  self?
 * Properties
@@ -165,8 +205,8 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
         ```
 
   #### Jon's Sources
-  https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html
-  https://www.beyondjava.net/blog/java-8-functional-programming-language/
-  http://stackoverflow.com/questions/34834700/object-oriented-programming-vs-procedural-programming
-  http://www.javacoffeebreak.com/articles/inside_java/insidejava-nov99.html
-  https://docs.oracle.com/cd/E13150_01/jrockit_jvm/jrockit/geninfo/diagnos/garbage_collect.html
+
+  https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html  
+  https://www.beyondjava.net/blog/java-8-functional-programming-language/  
+  http://stackoverflow.com/questions/34834700/object-oriented-programming-vs-procedural-programming  
+  http://www.javacoffeebreak.com/articles/inside_java/insidejava-nov99.html  
