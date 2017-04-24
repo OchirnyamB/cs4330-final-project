@@ -64,11 +64,45 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
     * All Java objects are stored on the heap.
     * This heap is divided into two areas (also called generations). The first is the nursery and second is called the old space. When the nursery becomes full, objects are moved to the old space, and when the old space becomes full, the objects are deleted.
   * How does it work?
+    * As stated above, objects first enter the nursery when they are instantiated. When the nursery becomes full, the objects are then moved to the old space. One caveat to this movement of objects data is an area called the keep area. Newly allocated objects are put into the keep area and are not garbage collected into the old space until the next round of objects are added to the nursery.  
   * Garbage collection?
     * Yes, when objects are not referenced anymore (and the heap becomes full), they are garbage collected (their memory is freed).
   * Automatic reference counting?
+    * No, Java uses the generational approach (nursery and old space) instead of reference counting.
 * Comparisons of references and values
   * How are values compared? (i.e. comparing two strings)
+    * In Java objects have the method `.equals()` for comparisons:
+    ```java
+    public class ComparisonExample {
+
+        public static void main(String[] args) {
+
+            /*String comparison example (this works for any object)*/
+            String s1 = "String 1";
+            String s2 = "String 2";
+
+            if(s1.equals(s2)) {
+                //this will not execute
+                System.out.println("String 1 and String 2 are equal");
+            } else {
+                //this will execute
+                System.out.println("String 1 is not equal to string 2");
+            }
+
+            /*Value comparison example*/
+            int i = 1;
+            int j = 1;
+
+            if(i == j) {
+                //this will execute
+                System.out.println("i and j are equal");
+            } else {
+                //this will not execute
+                System.out.println("i and j are not equal");
+            }
+        }
+    }
+    ```
 * Null/nil references
   * Which does the language use? (null/nil/etc)
   * Does the language have features for handling null/nil references?
@@ -135,3 +169,4 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
   https://www.beyondjava.net/blog/java-8-functional-programming-language/
   http://stackoverflow.com/questions/34834700/object-oriented-programming-vs-procedural-programming
   http://www.javacoffeebreak.com/articles/inside_java/insidejava-nov99.html
+  https://docs.oracle.com/cd/E13150_01/jrockit_jvm/jrockit/geninfo/diagnos/garbage_collect.html
