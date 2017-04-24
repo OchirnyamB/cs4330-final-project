@@ -1,7 +1,7 @@
 # cs4330-final-project
 
 ### Team Members  
-Chris Jansson
+Chris Jansson  
 Jon Lantsberger
 
 ### Languages
