@@ -58,8 +58,11 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
   * How is reflection used?
 * Memory management
   * How is it handled?
+    * All Java objects are stored on the heap.
+    * This heap is divided into two areas (also called generations). The first is the nursery and second is called the old space. When the nursery becomes full, objects are moved to the old space, and when the old space becomes full, the objects are deleted.
   * How does it work?
   * Garbage collection?
+    * Yes, when objects are not referenced anymore (and the heap becomes full), they are garbage collected (their memory is freed).
   * Automatic reference counting?
 * Comparisons of references and values
   * How are values compared? (i.e. comparing two strings)
@@ -127,3 +130,5 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
   #### Jon's Sources
   https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html
   https://www.beyondjava.net/blog/java-8-functional-programming-language/
+  http://stackoverflow.com/questions/34834700/object-oriented-programming-vs-procedural-programming
+  http://www.javacoffeebreak.com/articles/inside_java/insidejava-nov99.html
