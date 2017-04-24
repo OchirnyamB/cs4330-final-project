@@ -1,9 +1,19 @@
 # Java
 
+
+#### Sources  
+https://en.wikipedia.org/wiki/Java_(programming_language)
+
 * Language purpose/genesis
   * Why was the language created?
+    * Java was originally created for interactive television.
+    * Java was originally called "Oak," then it changed to "Green" and finally ended up as "Java."
+    * There were 5 goals for the language:
+      1. It must be "simple, object-oriented, and familiar"
+      2. It must be "robust and secure"
+      3. 
   * What problems was the language trying to address?
-    * Java's bytecode strategy was meant to let programmers "write once, run anywhere." As a result, compiled Java code is platform-independent.
+    * Java's bytecode strategy was meant to let programmers "write once, run anywhere." As a result, compiled Java code is platform-independent (as long as that system supports Java, via a JVM).
   * Is the language a reaction to a previous language or a replacement for another language?
 * Unique features of the language
   * Does the language have any particularly unique features?
