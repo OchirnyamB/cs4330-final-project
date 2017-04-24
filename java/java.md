@@ -64,7 +64,19 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
   * Does the language support procedural programming?
 * Functional programming
   * Does the language support functional programming?
-    * Test
+    * As of Java 8, Java supports some features of functional programming, specifically Lambda Expressions. Although this does not mean Java is fully a functional programming language, lambdas bring important features of a functional language.
+    * Here is an example using the functional `Runnable` interface and lambdas:
+    ```java
+    public class LambdaExample {
+
+        public static void main(String[] args) {
+
+            Runnable r = () -> System.out.println("Hello from a runnable in a lambda!");
+
+            r.run(); //this will print the text above
+        }
+    }
+    ```
 * Multithreading
   * Threads or thread-like abilities
     * Java supports multi-threaded applications
@@ -100,3 +112,4 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
 
   #### Jon's Sources
   https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html
+  https://www.beyondjava.net/blog/java-8-functional-programming-language/
