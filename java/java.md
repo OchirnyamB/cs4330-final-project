@@ -62,6 +62,7 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
   * Can the singleton instance be lazily instantiated?
 * Procedural programming
   * Does the language support procedural programming?
+    * Java was designed to be fully object oriented. All objects extend from a base `Object` class. The only exception to this (and what some argue does not make Java a "pure" object oriented language) is the inclusion of primitive types (`int`, `char`, etc...) that are not objects. Besides that, Java is fully object oriented and not procedural.
 * Functional programming
   * Does the language support functional programming?
     * As of Java 8, Java supports some features of functional programming, specifically Lambda Expressions. Although this does not mean Java is fully a functional programming language, lambdas bring important features of a functional language.
