@@ -131,7 +131,7 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
         ```
 
   #### Jon's Sources
-  https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html
-  https://www.beyondjava.net/blog/java-8-functional-programming-language/
-  http://stackoverflow.com/questions/34834700/object-oriented-programming-vs-procedural-programming
-  http://www.javacoffeebreak.com/articles/inside_java/insidejava-nov99.html
+  https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html  
+  https://www.beyondjava.net/blog/java-8-functional-programming-language/  
+  http://stackoverflow.com/questions/34834700/object-oriented-programming-vs-procedural-programming  
+  http://www.javacoffeebreak.com/articles/inside_java/insidejava-nov99.html  
