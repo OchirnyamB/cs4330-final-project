@@ -145,6 +145,7 @@ Instantiating a class:
     ```
 * Null/nil references
   * Which does the language use? (null/nil/etc)
+    * Java uses the `null` keyword
   * Does the language have features for handling null/nil references?
 * Errors and exception handling
 * Lambda expressions, closures, or functions as types
