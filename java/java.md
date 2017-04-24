@@ -70,8 +70,7 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
     * Because of how Java is run (inside the JVM), it actually is multi-threaded by default (i.e. the JVM is one thread and your program is another).
   * How is multitasking accomplished?
     * Java implements multitasking in two ways:
-      1. Implement the `Runnable` interface
-        * Example:
+      1. Implement the `Runnable` interface:
         ```java
         class RunnableExample implements Runnable {
 
@@ -84,8 +83,7 @@ https://en.wikipedia.org/wiki/Java_(programming_language)
             }
         }
         ```
-      2. Extend the `Thread` class
-        * Example:
+      2. Extend the `Thread` class:
         ```java
         class ThreadExample extends Thread {
 
