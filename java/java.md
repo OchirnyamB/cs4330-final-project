@@ -1,7 +1,12 @@
 # Java
 
 #### Chris's Sources  
-https://en.wikipedia.org/wiki/Java_(programming_language)
+https://en.wikipedia.org/wiki/Java_(programming_language)  
+https://gkdigital.com/questions/324/what-s-the-point-of-backing-fields  
+https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Properties.html  
+https://docs.oracle.com/javase/tutorial/java/concepts/interface.html  
+https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html  
+https://docs.oracle.com/javase/tutorial/reflect/
 
 * Language purpose/genesis
   * Why was the language created?
@@ -98,8 +103,7 @@ Instantiating a class:
   ```
 
 * Properties
-  * Getters and setters...write your own or built in?
-    * These are not built in, but they are easy to write:
+  * One of the way Java encapsulates data is through the use of getters and setters. They aren't built in, but are easy to write:
 
     ```java
     public int getSpeed() {
@@ -111,16 +115,43 @@ Instantiating a class:
     }
     ```
 
-  * Backing variables?
-  * Computed properties?
+  * This allows the programmer to execute code/error check before changing the value of a field:
+
+      ```java
+      public void setSpeed(int speed) {
+          if (speed > 0) {
+              this.speed = speed;
+          }
+      }
+      ```
 * Interfaces / protocols
   * What does the language support?
+    * Java uses interfaces, which specify what method(s) the class must implement:
   * What abilities does it have?
+    * Interfaces define what behavior a class should implement.
+    * Interfaces can have one method or many methods. Those that only have one method are typically referred to as "functional interfaces", which work hand in hand with lambda expressions.
   * How is it used?
+    * Interfaces are linked to classes via the `implements` keyword right after the name of the class:
+
+        ```java
+        public class Worker implements Runnable {
+            public void run() {
+
+            }
+        }
+        ```
+
 * Inheritance / extension
+    * In Java, *everything* is an object. It all fits in one massive hierarchy of objects, and the root of it all is the Object class.
+    * By extending another class, a class "inherits" its fields and methods. If you are creating a new class and there is already another class that has some of the same code you want, you can just extend that class and reuse the code. There are two advantages to this: first, you have to write less code yourself, and secondly, reuse of code is a good thing and makes it easier to debug your program.
 * Reflection
   * What reflection abilities are supported?
+    * Java includes a Reflection API which can be used to examine classes, their fields, their methods and their constructors.
   * How is reflection used?
+    * Reflection can be used for many things, including:
+        * Creating instances of extensibility objects using their fully-qualified names
+        * Designing visual development environments that offer help to the programmer based on knowledge of the code
+        * Debugging code even with private members of classes
 * Memory management
   * How is it handled?
     * All Java objects are stored on the heap.
