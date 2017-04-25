@@ -1,0 +1,63 @@
+# C++
+
+#### Sources
+
+* Language purpose/genesis
+  * Why was the language created?
+    * C++ was created in 1979 by Bjarne Stroustup at Bell Labs. He wanted it to be like C, but with features of a higher-level language. It started as "C with Classes" but then became C++. According to Wikipedia, Stroustup wanted to "enhance the C language  with Simula-like features".
+  * What problems was the language trying to address?
+    * The main problem addressed by C++ was adding abstraction to C, while maintaining fast performance. This is achieved through C's ability to access hardware, while adding conveniences like objects.
+  * Is the language a reaction to a previous language or a replacement for another language?
+    * C++ is a layer of abstraction on top of the C language. C++ can be considered a subset of C.
+* Unique features of the language
+  * Does the language have any particularly unique features?
+* Name spaces
+  * How are name spaces implemented?
+  * How are name spaces used?
+* Types
+    * What types does the language support?
+    * Are both reference and value types supported?
+    * Can new value types be created?
+* Classes
+  * Defining
+  * Creating new instances
+  * Constructing/initializing
+  * Destructing/de-initializing
+* Instance reference name in data type (class)
+  * this?  self?
+* Properties
+  * Getters and setters...write your own or built in?
+  * Backing variables?
+  * Computed properties?
+* Interfaces / protocols
+  * What does the language support?
+  * What abilities does it have?
+  * How is it used?
+* Inheritance / extension
+* Reflection
+  * What reflection abilities are supported?
+  * How is reflection used?
+* Memory management
+  * How is it handled?
+  * How does it work?
+  * Garbage collection?
+  * Automatic reference counting?
+* Comparisons of references and values
+  * How are values compared? (i.e. comparing two strings)
+* Null/nil references
+  * Which does the language use? (null/nil/etc)
+  * Does the language have features for handling null/nil references?
+* Errors and exception handling
+* Lambda expressions, closures, or functions as types
+* Implementation of listeners and event handlers
+* Singleton
+  * How is a singleton implemented?
+  * Can it be made thread-safe?
+  * Can the singleton instance be lazily instantiated?
+* Procedural programming
+  * Does the language support procedural programming?
+* Functional programming
+  * Does the language support functional programming?
+* Multithreading
+  * Threads or thread-like abilities
+  * How is multitasking accomplished?

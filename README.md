@@ -5,9 +5,9 @@ Chris Jansson
 Jon Lantsberger
 
 ### Languages
-* Java
-* Python
-* C++
+* [Java](java/java.md)
+* [Python](python/python.md)
+* [C++](c++/c++.md)
 
 ### Directions  
 https://github.com/dalemusser/OOLanguageComparison
