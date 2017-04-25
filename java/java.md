@@ -85,9 +85,32 @@ Instantiating a class:
   ```
 
 * Instance reference name in data type (class)
-  * this?  self?
+  * `this`
+
+  ```java
+  // Constructor
+  public Car(String make, String model, int year) {
+      this.make = make;
+      this.model = model;
+      this.year = year;
+      this.speed = 0;
+  }
+  ```
+
 * Properties
   * Getters and setters...write your own or built in?
+    * These are not built in, but they are easy to write:
+
+    ```java
+    public int getSpeed() {
+        return this.speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+    ```
+
   * Backing variables?
   * Computed properties?
 * Interfaces / protocols
