@@ -4,8 +4,11 @@
 
 * Language purpose/genesis
   * Why was the language created?
+    * C++ was created in 1979 by Bjarne Stroustup at Bell Labs. He wanted it to be like C, but with features of a higher-level language. It started as "C with Classes" but then became C++. According to Wikipedia, Stroustup wanted to "enhance the C language  with Simula-like features".
   * What problems was the language trying to address?
+    * The main problem addressed by C++ was adding abstraction to C, while maintaining fast performance. This is achieved through C's ability to access hardware, while adding conveniences like objects.
   * Is the language a reaction to a previous language or a replacement for another language?
+    * C++ is a layer of abstraction on top of the C language. C++ can be considered a subset of C.
 * Unique features of the language
   * Does the language have any particularly unique features?
 * Name spaces
