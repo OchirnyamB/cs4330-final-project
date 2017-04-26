@@ -7,8 +7,11 @@
     * The main problem addressed by C++ was adding abstraction to C, while maintaining fast performance. This is achieved through C's ability to access hardware, while adding conveniences like objects.
   * Is the language a reaction to a previous language or a replacement for another language?
     * C++ is a layer of abstraction on top of the C language. C++ can be considered a subset of C.
+
 * Unique features of the language
   * Does the language have any particularly unique features?
+    * Friendship
+
 * Namespaces
   * Namespaces are used to differentiate between functions, classes and variables that share the same name but belong to different libraries. There are two ways to work with namespaces.  
 
@@ -122,43 +125,86 @@
   ```
 
   * The destructor of an object is called when its lifespan (based on its scope) ends.
+
 * Properties
   * Getters and setters...write your own or built in?
   * Backing variables?
   * Computed properties?
+
+  * Getters and setters are not built in, but offer one strategy to encapsulate data.
+
+  ```c++
+  int getSpeed() {
+      return this.speed;
+  }
+
+  void setSpeed(int amount) {
+      this.speed = speed;
+  }
+  ```
+
+  * Alternatively, classes and functions can be labeled with the `friend` keyword. This allows it to access the private and protected members of that class.
+
+  ```c++
+  class Car {
+      string make;
+      string model;
+      int year;
+      int speed;
+
+      friend void changeYear(int);
+  }
+
+  void changeYear(int newYear) {
+      year = newYear;
+  }
+  ```
+
 * Interfaces / protocols
   * What does the language support?
   * What abilities does it have?
   * How is it used?
+
 * Inheritance / extension
+
 * Reflection
   * What reflection abilities are supported?
   * How is reflection used?
+
 * Memory management
   * How is it handled?
   * How does it work?
   * Garbage collection?
   * Automatic reference counting?
+
 * Comparisons of references and values
   * How are values compared? (i.e. comparing two strings)
+
 * Null/nil references
   * Which does the language use? (null/nil/etc)
   * Does the language have features for handling null/nil references?
+
 * Errors and exception handling
+
 * Lambda expressions, closures, or functions as types
+
 * Implementation of listeners and event handlers
+
 * Singleton
   * How is a singleton implemented?
   * Can it be made thread-safe?
   * Can the singleton instance be lazily instantiated?
+
 * Procedural programming
   * Does the language support procedural programming?
+
 * Functional programming
   * Does the language support functional programming?
+
 * Multithreading
   * Threads or thread-like abilities
   * How is multitasking accomplished?
 
   #### Sources
-  https://www.tutorialspoint.com/cplusplus/cpp_namespaces.htm  
+  https://www.tutorialspoint.com/cplusplus/
   http://www.cplusplus.com/doc/tutorial/
