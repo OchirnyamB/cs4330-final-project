@@ -46,7 +46,7 @@
             int b = 5;
 
             int sum = add(a, b);
-            int diff = subtact(&a, &b);
+            int diff = subtract(&a, &b);
         }
 
         // Pass by value
