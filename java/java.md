@@ -73,12 +73,12 @@ Defining a class:
       }
 
       // Method
-      public int accelerate(int amount) {
+      public void accelerate(int amount) {
           this.speed += amount;
       }
 
       // Method
-      public int decelerate(int amount) {
+      public void decelerate(int amount) {
           this.speed -= amount;
       }
   }
