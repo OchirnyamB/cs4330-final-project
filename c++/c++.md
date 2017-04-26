@@ -181,6 +181,14 @@
     ```
 
 * Inheritance / extension
+  * Inheritance in C++ is very similar to Java. The subclass "inherits" the members from its superclass, but can then further specify what is unique for itself. 
+  * This is done with a `:` instead of `extends`.
+  
+  ```c++
+  class Ford: public Car {
+  
+  }
+  ```
 
 * Reflection
   * What reflection abilities are supported?
