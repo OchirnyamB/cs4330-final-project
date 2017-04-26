@@ -192,13 +192,21 @@
 
 * Reflection
   * What reflection abilities are supported?
-  * How is reflection used?
+    * C++ does not natively support any reflection capabilities. 
+    * However, some of the same effects can be provided with special meta compilers or meta frameworks. 
 
 * Memory management
   * How is it handled?
+    * C++ is backwards compatible with C functions such as `malloc` and `free`, but these are rarely used.
+    * Instead, C++ offers `new` and `delete`, which allocate and deallocate heap memory.
   * How does it work?
+    * Unlike `malloc`, `new` is type-aware, meaning no casting is required. If you put `int *a = new int(4);`, the `int` type is understood.
   * Garbage collection?
+    * C++ has optional support for garbage collection. For example, Sun offers a C++ compiler that includes the libgc library.
+    * Another popular tool for garbage collection is RAII, which stands for "Resource Acquisition Is Initialization".
+      * The key idea behind RAII is that a resource is owned by an object, so that object's destructor will automatically destroy its resources at the appropriate time.
   * Automatic reference counting?
+    * C++ offers reference counting with the `std::shared_ptr` class.
 
 * Comparisons of references and values
   * How are values compared? (i.e. comparing two strings)
@@ -225,9 +233,10 @@
   * Does the language support functional programming?
 
 * Multithreading
-  * Threads or thread-like abilities
+  * Threads or thread-like abilities
   * How is multitasking accomplished?
 
-  #### Sources
-  https://www.tutorialspoint.com/cplusplus/  
-  http://www.cplusplus.com/doc/tutorial/
+#### Sources
+https://www.tutorialspoint.com/cplusplus/ . 
+http://www.cplusplus.com/doc/tutorial/ . 
+https://en.wikibooks.org/wiki/C%2B%2B_Programming/Memory_Management#Garbage_Collection_and_RAII . 
