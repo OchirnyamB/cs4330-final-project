@@ -237,6 +237,6 @@
   * How is multitasking accomplished?
 
 #### Sources
-https://www.tutorialspoint.com/cplusplus/ . 
-http://www.cplusplus.com/doc/tutorial/ . 
-https://en.wikibooks.org/wiki/C%2B%2B_Programming/Memory_Management#Garbage_Collection_and_RAII . 
+https://www.tutorialspoint.com/cplusplus/  
+http://www.cplusplus.com/doc/tutorial/  
+https://en.wikibooks.org/wiki/C%2B%2B_Programming/Memory_Management#Garbage_Collection_and_RAII  
