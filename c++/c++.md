@@ -171,12 +171,12 @@
     
     ```c++
     class Box {
-      private:
-        double length;
-        double width;
-        double height;
-      public:
-        virtual double getVolume() = 0;
+        private:
+            double length;
+            double width;
+            double height;
+        public:
+            virtual double getVolume() = 0;
     };
     ```
 
