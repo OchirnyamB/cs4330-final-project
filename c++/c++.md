@@ -127,10 +127,6 @@
   * The destructor of an object is called when its lifespan (based on its scope) ends.
 
 * Properties
-  * Getters and setters...write your own or built in?
-  * Backing variables?
-  * Computed properties?
-
   * Getters and setters are not built in, but offer one strategy to encapsulate data.
 
   ```c++
@@ -159,11 +155,30 @@
       year = newYear;
   }
   ```
+  
+  * Backing variables?
+    * Backing variables came about in C#.
+  * Computed properties?
+    * C++ does not offer computed properties per se, but another solution is to use `std::map` to hash keys into values.
 
 * Interfaces / protocols
   * What does the language support?
+    * C++ implements interfaces as **abstract classes**. These classes cannot be instantiated, but rather serve as a declaration of what functions must be implemented.
   * What abilities does it have?
+    * Abstract classes are useful because it can declare what functions need to be present, but each implementing class can define those functions however they need to. 
   * How is it used?
+    * Classes are made abstract by declaring at least one of its functions as a **pure virtual** function. You can do this by placing "= 0" in its declaration.
+    
+    ```c++
+    class Box {
+      private:
+        double length;
+        double width;
+        double height;
+      public:
+        virtual double getVolume() = 0;
+    };
+    ```
 
 * Inheritance / extension
 
