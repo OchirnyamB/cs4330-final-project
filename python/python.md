@@ -29,20 +29,66 @@ http://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference
       * Yes, through the creation of classes, you can create different types in Python.
 * Classes
   * Defining
+    * To define a new class in Python, do the following
+    ```python
+    class Test:
+        def __init__(self):
+            self.x = 5
+            self.y = 2
+    ```
   * Creating new instances
+    * In Python, if you want to create a new instance you do the following:
+    ```python
+    class Test:
+        def __init__(self):
+            self.x = 5
+            self.y = 2
+    test_function = Test(5, 2)
+    print(test_function.x) #prints 5
+    print(test_function.y) #prints 2
+    ```
   * Constructing/initializing
+    * Python uses the `__init__()` function to construct an instance of a class
   * Destructing/de-initializing
+    * This is handled by the garbage collector, so no user action needs to be taken.
 * Instance reference name in data type (class)
   * this?  self?
+    * Python uses the `self` keyword to reference an instance
 * Properties
   * Getters and setters...write your own or built in?
+    * You should not use getters and setters in Python.
   * Backing variables?
+    * Python does not have backing variables.
   * Computed properties?
+    * If you need to compute numbers dynamically, Python provides the `@property` directive. It is used like this:
+    ```python
+    class Computed:
+        @property
+        def x(self):
+            if self._x is None:
+                x = 0
+            return self.x
+        @x.setter
+        def x(set, value):
+            if self._x is None:
+                _ = 0
+                self._x = x
+    ```
 * Interfaces / protocols
   * What does the language support?
+    * Python supports many different protocols. These special protocol names are denoted by `__function_name__()` notation (called "magic methods"). Python also supports interfaces. They are much more flexible than interfaces in Java. You can choose what version of an interface you wish to use on the fly, where as in Java, the version is very important.
   * What abilities does it have?
+    * Interfaces have the ability to allow users to call methods you write, such as creating a package for a user to import. "Magic methods" have many abilities. I go further into this below.
   * How is it used?
+    * Python "magic methods" are used to do many things. They construct objects, create a string out of an object, and even hash the object.
 * Inheritance / extension
+  * In Python, inheritance follows this syntax:
+  ```python
+  class ExtendedClass(ParentClassName):
+      def __init__(self, x, y, z):
+          ParentClassName.__init__(self, x, y) #inheriting from the parent class
+          self.z = z
+  ```
 * Reflection
   * What reflection abilities are supported?
   * How is reflection used?
