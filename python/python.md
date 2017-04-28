@@ -4,6 +4,8 @@
 https://en.wikipedia.org/wiki/Python_(programming_language)
 http://stackoverflow.com/questions/3913217/what-are-python-namespaces-all-about
 http://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference
+https://en.wikibooks.org/wiki/Python_Programming/Reflection
+https://docs.python.org/3/
 
 * Language purpose/genesis
   * Why was the language created?
@@ -91,19 +93,61 @@ http://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference
   ```
 * Reflection
   * What reflection abilities are supported?
+    * Python has the ability to use reflection to see what type, class, attributes, and methods the object possesses.
   * How is reflection used?
+    ```python
+    #Using the type() method to check the type of the object
+        type("Hello World") #type = str
+        type(5) #type = int
+        type(5.0) #type = float
+
+    #Checking to see if an object is an instance of a certain class
+        isinstance("Hello World", str) #isinstance = true
+        isinstance(5, int) #isinstance = true
+        isinstance(5.0, int) #isinstance = false, 5.0 is a float
+    ```
 * Memory management
   * How is it handled?
+    * According to the Python documentation, all objects and data in a program are stored on a private heap managed by the Python interpreter.
   * How does it work?
+    * At a low level the Python memory manager interacts with the operating system to request and ensure there is enough memory. It then can allocate space for the requested object.
   * Garbage collection?
+    * Garbage collection is handled by an algorithm that utilizes reference counting to determine if an object should be freed.
   * Automatic reference counting?
+    * Yes, this is how Python knows if an object is no longer in use/being referenced.
 * Comparisons of references and values
   * How are values compared? (i.e. comparing two strings)
+    * In Python, you can use the `==` operator to determine if two things are equal (e.g. 2 strings).
 * Null/nil references
   * Which does the language use? (null/nil/etc)
+    * Python uses the `None` keyword. Actually, in Python, `None` is an object that represents a state of nothing.
   * Does the language have features for handling null/nil references?
+    * Yes, you can use the `is` keyword to determine if an object has a state of `None`
 * Errors and exception handling
+  * If a syntax error occurs, the python interpreter will alert you to its presence. It is also refered to as a parsing error.
+  * Exceptions are handled like this:
+  ```python
+  while True:
+      try:
+          x = str(input("Please enter a string: "))
+          break
+      except ValueError:
+          print("That's not a string")
+  ```
 * Lambda expressions, closures, or functions as types
+  * Python supports all of the above. Examples are below:
+  ```python
+  #Example of a lambda in python:
+  l = lambda x, y : x - y
+  l(4,2) #The result is 2
+  #Example of a closure in python, and setting a function as a variable type:
+  def closure_test(output):
+      def output_test():
+          print(output)
+      return output_test #returning the nested function
+  closure = closure_test("Hello World")
+  closure() #Outputs: Hello World
+  ```
 * Implementation of listeners and event handlers
 * Singleton
   * How is a singleton implemented?
