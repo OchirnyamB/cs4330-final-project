@@ -155,7 +155,7 @@
       year = newYear;
   }
   ```
-  
+
   * Backing variables?
     * Backing variables came about in C#.
   * Computed properties?
@@ -165,10 +165,10 @@
   * What does the language support?
     * C++ implements interfaces as **abstract classes**. These classes cannot be instantiated, but rather serve as a declaration of what functions must be implemented.
   * What abilities does it have?
-    * Abstract classes are useful because it can declare what functions need to be present, but each implementing class can define those functions however they need to. 
+    * Abstract classes are useful because it can declare what functions need to be present, but each implementing class can define those functions however they need to.
   * How is it used?
     * Classes are made abstract by declaring at least one of its functions as a **pure virtual** function. You can do this by placing "= 0" in its declaration.
-    
+
     ```c++
     class Box {
         private:
@@ -181,19 +181,19 @@
     ```
 
 * Inheritance / extension
-  * Inheritance in C++ is very similar to Java. The subclass "inherits" the members from its superclass, but can then further specify what is unique for itself. 
+  * Inheritance in C++ is very similar to Java. The subclass "inherits" the members from its superclass, but can then further specify what is unique for itself.
   * This is done with a `:` instead of `extends`.
-  
+
   ```c++
   class Ford: public Car {
-  
+
   }
   ```
 
 * Reflection
   * What reflection abilities are supported?
-    * C++ does not natively support any reflection capabilities. 
-    * However, some of the same effects can be provided with special meta compilers or meta frameworks. 
+    * C++ does not natively support any reflection capabilities.
+    * However, some of the same effects can be provided with special meta compilers or meta frameworks.
 
 * Memory management
   * How is it handled?
@@ -209,34 +209,79 @@
     * C++ offers reference counting with the `std::shared_ptr` class.
 
 * Comparisons of references and values
-  * How are values compared? (i.e. comparing two strings)
+  * Primitive data types can be easily compared with the `==` operator:
+
+  ```c++
+  if (x == 5) {
+      // Do something
+  }
+  ```
+
+  * Strings can be compared with the `std::string::compare()` function:
+
+  ```c++
+  if (s1.compare(s2) == 0) {
+      // Do something
+  }
+  ```
 
 * Null/nil references
-  * Which does the language use? (null/nil/etc)
-  * Does the language have features for handling null/nil references?
+  * C++ uses `NULL`
+  * It does not have exception handling for null pointers; instead it will lead to undefined behavior.
 
 * Errors and exception handling
+    * C++ offers a `std::exception` class which declares some objects to be thrown as exceptions.
+    * C++ also offers *try-catch* blocks which will catch exceptions that are thrown. There can be multiple catch blocks associated with a try block.
 
 * Lambda expressions, closures, or functions as types
+    * Lambda expressions can be used in C++. For example, a lambda expression can be passed as an argument to the `std::sort` function:
+
+    ```c++
+    #include <algorithm>  
+    #include <cmath>  
+
+    void abssort(float* x, unsigned n) {  
+        std::sort(x, x + n,  
+            // Lambda expression begins  
+            [](float a, float b) {  
+            return (std::abs(a) < std::abs(b));  
+            } // end of lambda expression  
+        );  
+    }  
+    ```
 
 * Implementation of listeners and event handlers
+  * C++ doesn't have native support for event handling, but there are a couple ways to get around this.
+    1. Create a multithreaded application and have one thread perform a continuous loop while waiting for a certain event.
+    2. Use a framework that provides them (such as SDL, Qt or GNOME)
 
 * Singleton
   * How is a singleton implemented?
-  * Can it be made thread-safe?
+    * A singleton is implemented with a global pointer, which can be initialized to 0 or `NULL`. When that class is instantiated for the first time, that object is assigned to the global pointer. Any time after that, if an instance of that class attempts to be instantiated, a simple `if` statement checks if the global pointer is already initialized. If it is, we know the singleton has already been made, and another object will not be created.
   * Can the singleton instance be lazily instantiated?
+    * Yes, but it is not thread safe.
 
 * Procedural programming
   * Does the language support procedural programming?
+    * Yes. It is also backwards-compatible with C, so you could write an entire program procedurally as in C.
 
 * Functional programming
   * Does the language support functional programming?
+    * Yes. Functional features are introduced in the C++11 standard.
+    * However, instead of treating functions as objects (like true functional programming), C++ renders lambdas as a class with an operate method:
+
+    ```c++
+    auto println = [](const char  *message){ std::cout << message << std::endl;};
+    ```
 
 * Multithreading
-  * Threads or thread-like abilities
   * How is multitasking accomplished?
+    * C++ does not offer native multithreading support. Instead, it relies entirely on the operating system to provide this feature.
+    * One way to do this is to use POSIX Threads (PThreads) which provides an API that can be included in your program.
 
 #### Sources
 https://www.tutorialspoint.com/cplusplus/  
 http://www.cplusplus.com/doc/tutorial/  
 https://en.wikibooks.org/wiki/C%2B%2B_Programming/Memory_Management#Garbage_Collection_and_RAII  
+https://msdn.microsoft.com/en-us/library/dd293608.aspx  
+http://blog.madhukaraphatak.com/functional-programming-in-c++/
