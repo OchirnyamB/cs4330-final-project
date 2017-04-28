@@ -1,6 +1,6 @@
 # Java
 
-* Language purpose/genesis
+#### Language purpose/genesis
   * Why was the language created?
     * Java was originally created for interactive television.
     * Java was originally called "Oak," then it changed to "Green" and finally ended up as "Java."
@@ -16,7 +16,8 @@
     * Java took a lot of its syntax from C and C++, but was not meant to handle all of the low-level operations they could perform.
     * Unlike C and C++ however, ,Java compiles to bytecode that is meant to be run on a JVM. This way, any machine can run the program as long as it supports Java.
     * Java doesn't do low-level operations as well as C or C++, but the Java API allows it to do much higher-level things with ease.
-* Unique features of the language
+
+#### Unique features of the language
   * Does the language have any particularly unique features?
     * Java bytecode
     * Java API
@@ -24,19 +25,22 @@
     * Popular for client-server applications
     * Java applications and Java web applets
     * Garbage collection
-* Name spaces
+
+#### Name spaces
   * How are name spaces implemented?
     * Java implements name spaces by organizing objects within packages.
   * How are name spaces used?
     * At the top of a class, the first line specifies what package the class belongs to. Packages also offer one way to handle access control. For example, to restrict code to package-only, use the default modifier.
-* Types
+
+#### Types
     * What types does the language support?
       * There are 8 primitive data types: byte, short, int, long, float, double, boolean, char
     * Are both reference and value types supported?
       * Yes. Primitive data types are passed by value (unless you send the address), and objects are passed by reference.
     * Can new value types be created?
       * Yes. You can create enumerations and classes that include state information.
-* Classes
+
+#### Classes
   * Defining
     * Classes have state and behavior, in the form of instance variables and methods.
   * Creating new instances
@@ -94,7 +98,7 @@ Instantiating a class:
   }
   ```
 
-* Properties
+#### Properties
   * One of the way Java encapsulates data is through the use of getters and setters. They aren't built in, but are easy to write:
 
     ```java
@@ -116,7 +120,7 @@ Instantiating a class:
           }
       }
       ```
-* Interfaces / protocols
+#### Interfaces / protocols
   * What does the language support?
     * Java uses interfaces, which specify what method(s) the class must implement:
   * What abilities does it have?
@@ -133,10 +137,11 @@ Instantiating a class:
         }
         ```
 
-* Inheritance / extension
+#### Inheritance / extension
     * In Java, *everything* is an object. It all fits in one massive hierarchy of objects, and the root of it all is the Object class.
     * By extending another class, a class "inherits" its fields and methods. If you are creating a new class and there is already another class that has some of the same code you want, you can just extend that class and reuse the code. There are two advantages to this: first, you have to write less code yourself, and secondly, reuse of code is a good thing and makes it easier to debug your program.
-* Reflection
+    
+#### Reflection
   * What reflection abilities are supported?
     * Java includes a Reflection API which can be used to examine classes, their fields, their methods and their constructors.
   * How is reflection used?
@@ -144,7 +149,8 @@ Instantiating a class:
         * Creating instances of extensibility objects using their fully-qualified names
         * Designing visual development environments that offer help to the programmer based on knowledge of the code
         * Debugging code even with private members of classes
-* Memory management
+
+#### Memory management
   * How is it handled?
     * All Java objects are stored on the heap.
     * This heap is divided into two areas (also called generations). The first is the nursery and second is called the old space. When the nursery becomes full, objects are moved to the old space, and when the old space becomes full, the objects are deleted.
@@ -154,7 +160,8 @@ Instantiating a class:
     * Yes, when objects are not referenced anymore (and the heap becomes full), they are garbage collected (their memory is freed).
   * Automatic reference counting?
     * No, Java uses the generational approach (nursery and old space) instead of reference counting.
-* Comparisons of references and values
+
+#### Comparisons of references and values
   * How are values compared? (i.e. comparing two strings)
     * In Java objects have the method `.equals()` for comparisons:
     ```java
@@ -188,21 +195,28 @@ Instantiating a class:
         }
     }
     ```
-* Null/nil references
+
+#### Null/nil references
   * Which does the language use? (null/nil/etc)
     * Java uses the `null` keyword
   * Does the language have features for handling null/nil references?
-* Errors and exception handling
-* Lambda expressions, closures, or functions as types
-* Implementation of listeners and event handlers
-* Singleton
+
+#### Errors and exception handling
+
+#### Lambda expressions, closures, or functions as types
+
+#### Implementation of listeners and event handlers
+
+#### Singleton
   * How is a singleton implemented?
   * Can it be made thread-safe?
   * Can the singleton instance be lazily instantiated?
-* Procedural programming
+
+#### Procedural programming
   * Does the language support procedural programming?
     * Java was designed to be fully object oriented. All objects extend from a base `Object` class. The only exception to this (and what some argue does not make Java a "pure" object oriented language) is the inclusion of primitive types (`int`, `char`, etc...) that are not objects. Besides that, Java is fully object oriented and not procedural.
-* Functional programming
+
+#### Functional programming
   * Does the language support functional programming?
     * As of Java 8, Java supports some features of functional programming, specifically Lambda Expressions. Although this does not mean Java is fully a functional programming language, lambdas bring important features of a functional language.
     * Here is an example using the functional `Runnable` interface and lambdas:
@@ -217,7 +231,8 @@ Instantiating a class:
         }
     }
     ```
-* Multithreading
+
+#### Multithreading
   * Threads or thread-like abilities
     * Java supports multi-threaded applications
     * Because of how Java is run (inside the JVM), it actually is multi-threaded by default (i.e. the JVM is one thread and your program is another).
