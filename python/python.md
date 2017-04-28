@@ -1,12 +1,5 @@
 # Python
 
-#### Sources
-https://en.wikipedia.org/wiki/Python_(programming_language)
-http://stackoverflow.com/questions/3913217/what-are-python-namespaces-all-about
-http://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference
-https://en.wikibooks.org/wiki/Python_Programming/Reflection
-https://docs.python.org/3/
-
 * Language purpose/genesis
   * Why was the language created?
     * Python was invented in 1989 by Guido van Rossum as a project to keep himself busy over a holiday when his office was closed. According to Wikipedia, he wanted to appeal to "Unix/C hackers".
@@ -160,3 +153,10 @@ https://docs.python.org/3/
 * Multithreading
   * Threads or thread-like abilities
   * How is multitasking accomplished?
+
+#### Sources
+https://en.wikipedia.org/wiki/Python_(programming_language)
+http://stackoverflow.com/questions/3913217/what-are-python-namespaces-all-about
+http://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference
+https://en.wikibooks.org/wiki/Python_Programming/Reflection
+https://docs.python.org/3/
