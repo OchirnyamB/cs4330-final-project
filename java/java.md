@@ -86,17 +86,16 @@ Instantiating a class:
   ```
 
 Instance reference name in data type (class)
-* `this`
 
-  ```java
-  // Constructor
-  public Car(String make, String model, int year) {
-      this.make = make;
-      this.model = model;
-      this.year = year;
-      this.speed = 0;
-  }
-  ```
+```java
+// Constructor
+public Car(String make, String model, int year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+    this.speed = 0;
+}
+```
 
 #### Properties
 * One of the way Java encapsulates data is through the use of getters and setters. They aren't built in, but are easy to write:
