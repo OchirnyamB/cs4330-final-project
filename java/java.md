@@ -85,8 +85,8 @@ Instantiating a class:
   Car car = new Car("Volvo", "s60", 2012);
   ```
 
-* Instance reference name in data type (class)
-  * `this`
+Instance reference name in data type (class)
+* `this`
 
   ```java
   // Constructor
