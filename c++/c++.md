@@ -10,6 +10,10 @@
 
 * Unique features of the language
   * Does the language have any particularly unique features?
+    * Stronger typing than C
+    * Larger standard library than C
+    * Constructors and destructors
+    * Limiting the scope of data
     * Friendship
 
 * Namespaces
@@ -284,4 +288,5 @@ https://www.tutorialspoint.com/cplusplus/
 http://www.cplusplus.com/doc/tutorial/  
 https://en.wikibooks.org/wiki/C%2B%2B_Programming/Memory_Management#Garbage_Collection_and_RAII  
 https://msdn.microsoft.com/en-us/library/dd293608.aspx  
-http://blog.madhukaraphatak.com/functional-programming-in-c++/
+http://blog.madhukaraphatak.com/functional-programming-in-c++/  
+https://www.ukessays.com/essays/english-language/the-unique-features-of-c-in-programming-english-language-essay.php
