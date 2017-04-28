@@ -34,7 +34,7 @@
 
 #### Types
 * What types does the language support?
-  * There are 8 primitive data types: byte, short, int, long, float, double, boolean, char
+  * There are 8 primitive data types: `byte`, `short`, `int`, `long`, `float`, `double`, `boolean`, `char`
 * Are both reference and value types supported?
   * Yes. Primitive data types are passed by value (unless you send the address), and objects are passed by reference.
 * Can new value types be created?
