@@ -1,6 +1,6 @@
 # C++
 
-* Language purpose/genesis
+#### Language purpose/genesis
   * Why was the language created?
     * C++ was created in 1979 by Bjarne Stroustup at Bell Labs. He wanted it to be like C, but with features of a higher-level language. It started as "C with Classes" but then became C++. According to Wikipedia, Stroustup wanted to "enhance the C language  with Simula-like features".
   * What problems was the language trying to address?
@@ -8,7 +8,7 @@
   * Is the language a reaction to a previous language or a replacement for another language?
     * C++ is a layer of abstraction on top of the C language. C++ can be considered a subset of C.
 
-* Unique features of the language
+#### Unique features of the language
   * Does the language have any particularly unique features?
     * Stronger typing than C
     * Larger standard library than C
@@ -16,7 +16,7 @@
     * Limiting the scope of data
     * Friendship
 
-* Namespaces
+#### Namespaces
   * Namespaces are used to differentiate between functions, classes and variables that share the same name but belong to different libraries. There are two ways to work with namespaces.  
 
   #1: Explicitly declare the namespace along with each reference to the library:
@@ -41,7 +41,7 @@
   }
   ```
 
-* Types
+#### Types
     * What types does the language support?
         * `unsigned char`, `char`, `char16_t`, `char32_t`, `wchar_t`, `unsigned short`, `short`, `unsigned int`, `int`, `unsigned long`, `long`, `unsigned long long`, `long long`, `float`, `double`, `long double`, `bool`, `void`, `decltype(nullptr)`
     * Are both reference and value types supported?
@@ -92,7 +92,7 @@
         enum coins {penny, nickel, dime, quarter};
         ```
 
-* Classes
+#### Classes
     * Classes can hold data and functions. Thus every instance of that class is called an *object*, and it has both state and behavior.
     * Classes are defined with the `class` keyword:
 
@@ -130,7 +130,7 @@
 
   * The destructor of an object is called when its lifespan (based on its scope) ends.
 
-* Properties
+#### Properties
   * Getters and setters are not built in, but offer one strategy to encapsulate data.
 
   ```c++
@@ -165,7 +165,7 @@
   * Computed properties?
     * C++ does not offer computed properties per se, but another solution is to use `std::map` to hash keys into values.
 
-* Interfaces / protocols
+#### Interfaces / protocols
   * What does the language support?
     * C++ implements interfaces as **abstract classes**. These classes cannot be instantiated, but rather serve as a declaration of what functions must be implemented.
   * What abilities does it have?
@@ -184,7 +184,7 @@
     };
     ```
 
-* Inheritance / extension
+#### Inheritance / extension
   * Inheritance in C++ is very similar to Java. The subclass "inherits" the members from its superclass, but can then further specify what is unique for itself.
   * This is done with a `:` instead of `extends`.
 
@@ -194,12 +194,12 @@
   }
   ```
 
-* Reflection
+#### Reflection
   * What reflection abilities are supported?
     * C++ does not natively support any reflection capabilities.
     * However, some of the same effects can be provided with special meta compilers or meta frameworks.
 
-* Memory management
+#### Memory management
   * How is it handled?
     * C++ is backwards compatible with C functions such as `malloc` and `free`, but these are rarely used.
     * Instead, C++ offers `new` and `delete`, which allocate and deallocate heap memory.
@@ -212,7 +212,7 @@
   * Automatic reference counting?
     * C++ offers reference counting with the `std::shared_ptr` class.
 
-* Comparisons of references and values
+#### Comparisons of references and values
   * Primitive data types can be easily compared with the `==` operator:
 
   ```c++
@@ -229,7 +229,7 @@
   }
   ```
 
-* Null/nil references
+#### Null/nil references
   * C++ uses `NULL`
   * It does not have exception handling for null pointers; instead it will lead to undefined behavior.
 
