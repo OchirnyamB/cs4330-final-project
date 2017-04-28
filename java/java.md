@@ -1,13 +1,5 @@
 # Java
 
-#### Chris's Sources  
-https://en.wikipedia.org/wiki/Java_(programming_language)  
-https://gkdigital.com/questions/324/what-s-the-point-of-backing-fields  
-https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Properties.html  
-https://docs.oracle.com/javase/tutorial/java/concepts/interface.html  
-https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html  
-https://docs.oracle.com/javase/tutorial/reflect/
-
 * Language purpose/genesis
   * Why was the language created?
     * Java was originally created for interactive television.
@@ -258,9 +250,14 @@ Instantiating a class:
         }
         ```
 
-  #### Jon's Sources
-
-  https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html  
-  https://www.beyondjava.net/blog/java-8-functional-programming-language/  
-  http://stackoverflow.com/questions/34834700/object-oriented-programming-vs-procedural-programming  
-  http://www.javacoffeebreak.com/articles/inside_java/insidejava-nov99.html  
+#### Sources
+https://en.wikipedia.org/wiki/Java_(programming_language)  
+https://gkdigital.com/questions/324/what-s-the-point-of-backing-fields  
+https://developer.apple.com/library/content/documentation/Swift/Conceptual/Swift_Programming_Language/Properties.html  
+https://docs.oracle.com/javase/tutorial/java/concepts/interface.html  
+https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html  
+https://docs.oracle.com/javase/tutorial/reflect/  
+https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html  
+https://www.beyondjava.net/blog/java-8-functional-programming-language/  
+http://stackoverflow.com/questions/34834700/object-oriented-programming-vs-procedural-programming  
+http://www.javacoffeebreak.com/articles/inside_java/insidejava-nov99.html  
