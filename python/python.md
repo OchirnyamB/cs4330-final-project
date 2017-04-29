@@ -156,26 +156,45 @@ closure = closure_test("Hello World")
 closure() #Outputs: Hello World
 ```
 
-#### Implementation of listeners and event handlers
-
-#### Singleton
-* How is a singleton implemented?
-* Can it be made thread-safe?
-* Can the singleton instance be lazily instantiated?
-
-#### Procedural programming
-* Does the language support procedural programming?
-
-#### Functional programming
-* Does the language support functional programming?
-
-#### Multithreading
-* Threads or thread-like abilities
-* How is multitasking accomplished?
+* Implementation of listeners and event handlers
+  * Listeners and event handlers are implemented using the `EventHandler` class
+  ```python
+  def eventTest(): #defining a function to be used in the event handler
+      print("Event happened!")
+  class TestClass(object):
+      def __init__(self):
+          self.event = EventHandler(self)   
+  ```
+  ```python
+  #calling the event handler
+  testObject = TestClass()
+  testObject.event += eventTest
+  testobject.event() #This prints: "Event happened!"
+  ```
+* Singleton
+  * How is a singleton implemented?
+    * There seem to be a few different ways in python to accomplish this. According to StackOverflow, a singleton is implemented using meta classes as follows:
+    ```python
+    class Logger(metaclass=Singleton):
+        pass
+    ```
+  * Can it be made thread-safe?
+    * There seems to be mixed information on if this is possible in Python. Many people argue that implementing singletons in python isn't pythonic and argue against their use.
+  * Can the singleton instance be lazily instantiated?
+    * The same StackOverflow post referenced using lazy instantiation to instantiate hardware modules, so yes they can be instantianted in this way.
+* Procedural programming
+  * Does the language support procedural programming?
+    * Yes, it does. You can rely solely on functions you define, and then call a main function that calls all of the other functions you created.
+* Functional programming
+  * Does the language support functional programming?
+* Multithreading
+  * Threads or thread-like abilities
+  * How is multitasking accomplished?
 
 #### Sources
 https://en.wikipedia.org/wiki/Python_(programming_language)
 http://stackoverflow.com/questions/3913217/what-are-python-namespaces-all-about
 http://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference
 https://en.wikibooks.org/wiki/Python_Programming/Reflection
+http://stackoverflow.com/questions/6760685/creating-a-singleton-in-python
 https://docs.python.org/3/
