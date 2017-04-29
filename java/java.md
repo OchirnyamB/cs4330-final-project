@@ -239,6 +239,7 @@ try {
   Method method = ExampleClass.class.getDeclaredMethod("Method" + TestVar);
   method.inovke();
   ```
+  
 #### Implementation of listeners and event handlers
 * An example of an event handler in Java is the `ActionEvent` in JavaFX. It is passed to methods and invoked when a UI elemet is interacted with.
 #### Singleton

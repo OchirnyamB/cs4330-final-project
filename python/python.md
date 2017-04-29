@@ -193,9 +193,11 @@ testobject.event() #This prints: "Event happened!"
   * Yes, python supports functional programming. Actually, python supports four different paradigms of programming: Functional, Imperative, Object-Oriented, and Procedural.
 
 #### Multithreading
-* Threads or thread-like abilities
+* Threads or thread-like abilities?
+  * Yes, python contains threading capabilities. It is accomplished with the `thread` module.
 * How is multitasking accomplished?
-
+  * Multithreading is accomplished by first importing the `thread` module. Then when you want to start a thread you call `thread.start_new_thread(function, args)`, where function is the function to be started in a new thread, and args are the arguments that are passed to the function.
+  
 #### Sources
 https://en.wikipedia.org/wiki/Python_(programming_language)
 http://stackoverflow.com/questions/3913217/what-are-python-namespaces-all-about
@@ -204,3 +206,4 @@ https://en.wikibooks.org/wiki/Python_Programming/Reflection
 http://stackoverflow.com/questions/6760685/creating-a-singleton-in-python
 https://blog.newrelic.com/2015/04/01/python-programming-styles/
 https://docs.python.org/3/
+https://www.tutorialspoint.com/python/python_multithreading.htm
