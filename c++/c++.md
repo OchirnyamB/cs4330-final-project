@@ -93,42 +93,42 @@
         ```
 
 #### Classes
-    * Classes can hold data and functions. Thus every instance of that class is called an *object*, and it has both state and behavior.
-    * Classes are defined with the `class` keyword:
+* Classes can hold data and functions. Thus every instance of that class is called an *object*, and it has both state and behavior.
+* Classes are defined with the `class` keyword:
 
-    ```c++
-    class Car {
-        string make;
-        string model;
-        int year;
-        int speed;
+```c++
+class Car {
+    string make;
+    string model;
+    int year;
+    int speed;
 
-        Car::Car(string make, string model, int year) {
-            this.make = make;
-            this.model = model;
-            this.year = year;
-            this.speed = 0;
-        }
-
-        public void Car::accelerate(int amount) {
-            this.speed += amount;
-        }
-
-        public void Car::decelerate(int amount) {
-            this.speed -= amount;
-        }
+    Car::Car(string make, string model, int year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+        this.speed = 0;
     }
-    ```
 
-  * Classes are instantiated by calling the constructor, which initializes the fields:
+    public void Car::accelerate(int amount) {
+        this.speed += amount;
+    }
 
-  ```c++
-  int main() {
-      Car car("Volvo", "s60", 2012);
-  }
-  ```
+    public void Car::decelerate(int amount) {
+        this.speed -= amount;
+    }
+}
+```
 
-  * The destructor of an object is called when its lifespan (based on its scope) ends.
+* Classes are instantiated by calling the constructor, which initializes the fields:
+
+```c++
+int main() {
+  Car car("Volvo", "s60", 2012);
+}
+```
+
+* The destructor of an object is called when its lifespan (based on its scope) ends.
 
 #### Properties
   * Getters and setters are not built in, but offer one strategy to encapsulate data.
