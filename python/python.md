@@ -187,6 +187,7 @@ closure() #Outputs: Hello World
     * Yes, it does. You can rely solely on functions you define, and then call a main function that calls all of the other functions you created.
 * Functional programming
   * Does the language support functional programming?
+    * Yes, python supports functional programming. Actually, python supports four different paradigms of programming: Functional, Imperative, Object-Oriented, and Procedural.
 * Multithreading
   * Threads or thread-like abilities
   * How is multitasking accomplished?
@@ -197,4 +198,5 @@ http://stackoverflow.com/questions/3913217/what-are-python-namespaces-all-about
 http://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference
 https://en.wikibooks.org/wiki/Python_Programming/Reflection
 http://stackoverflow.com/questions/6760685/creating-a-singleton-in-python
+https://blog.newrelic.com/2015/04/01/python-programming-styles/
 https://docs.python.org/3/
