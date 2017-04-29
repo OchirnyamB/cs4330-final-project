@@ -212,13 +212,39 @@ try {
 ```
 
 #### Lambda expressions, closures, or functions as types
-
+  * As of Java 8, lambda expressions are supported. An example of a lambda statement can be found int the "Functional Programming" section below. Also, Java supports closures as anonymous inner classes and also methods as types through reflection.
+  ```java
+  //Example of Closures (Anonymous Inner Classes)
+  public class AnonymousClass {
+      interface HelloWorld {
+          public void helloWorld();
+          public void hello(String place);
+      }
+      public void createHelloWorld() {
+          HelloWorld hello = new HelloWorld() {
+              String world = "world";
+          public void helloWorld() {
+              hello("world");
+          }
+          public void hello(String place) {
+              world = place;
+              System.out.println("Hello " + place);
+          }
+      };
+    }
+  }
+  ```
+  ```java
+  //Reflection (method as a variable) example
+  Method method = ExampleClass.class.getDeclaredMethod("Method" + TestVar);
+  method.inovke();
+  ```
 #### Implementation of listeners and event handlers
-
+* An example of an event handler in Java is the `ActionEvent` in JavaFX. It is passed to methods and invoked when a UI elemet is interacted with.
 #### Singleton
-* How is a singleton implemented?
-* Can it be made thread-safe?
-* Can the singleton instance be lazily instantiated?
+* How is a singleton implemented? Singletons are declared in Java by creating a `private` constructor, and then providing a method to get an instance, but only if the class has not been created yet, ensuring that only one instance of the object is created.
+* Can it be made thread-safe? Yes, many different methods exist to make singletons thread safe. These include: creating the singleton at class load time, and synchronizing the getting of the instance.
+* Can the singleton instance be lazily instantiated? Yes, by following the pattern described above, you can lazily instantiate the singleton.
 
 #### Procedural programming
 * Does the language support procedural programming?
@@ -282,5 +308,7 @@ https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html
 https://docs.oracle.com/javase/tutorial/reflect/  
 https://docs.oracle.com/javase/tutorial/essential/concurrency/runthread.html  
 https://www.beyondjava.net/blog/java-8-functional-programming-language/  
-http://stackoverflow.com/questions/34834700/object-oriented-programming-vs-procedural-programming  
-http://www.javacoffeebreak.com/articles/inside_java/insidejava-nov99.html  
+http://stackoverflow.com/questions/34834700/object-oriented-programming-vs-procedural-programming
+http://www.javacoffeebreak.com/articles/inside_java/insidejava-nov99.html
+https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html
+http://stackoverflow.com/questions/4138527/how-to-call-a-java-method-using-a-variable-name
