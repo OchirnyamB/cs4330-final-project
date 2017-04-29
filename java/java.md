@@ -119,7 +119,7 @@ public Car(String make, String model, int year) {
         }
     }
     ```
-    
+
 #### Interfaces / protocols
 * What does the language support?
   * Java uses interfaces, which specify what method(s) the class must implement:
@@ -140,7 +140,7 @@ public Car(String make, String model, int year) {
 #### Inheritance / extension
 * In Java, *everything* is an object. It all fits in one massive hierarchy of objects, and the root of it all is the Object class.
 * By extending another class, a class "inherits" its fields and methods. If you are creating a new class and there is already another class that has some of the same code you want, you can just extend that class and reuse the code. There are two advantages to this: first, you have to write less code yourself, and secondly, reuse of code is a good thing and makes it easier to debug your program.
-    
+
 #### Reflection
 * What reflection abilities are supported?
   * Java includes a Reflection API which can be used to examine classes, their fields, their methods and their constructors.
@@ -202,6 +202,14 @@ public Car(String make, String model, int year) {
 * Does the language have features for handling null/nil references?
 
 #### Errors and exception handling
+* Exceptions in Java are handled by `try-catch` blocks:
+```java
+try {
+    //try something they may cause an error
+} catch(Exception ex) {
+    //do something to fix the exception (i.e. quit gracefully)
+}
+```
 
 #### Lambda expressions, closures, or functions as types
 
