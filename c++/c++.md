@@ -90,7 +90,7 @@ int main() {
 
     ```c++
     enum coins {penny, nickel, dime, quarter};
-        ```
+    ```
 
 #### Classes
 * Classes can hold data and functions. Thus every instance of that class is called an *object*, and it has both state and behavior.
