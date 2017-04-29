@@ -42,54 +42,54 @@
   ```
 
 #### Types
-    * What types does the language support?
-        * `unsigned char`, `char`, `char16_t`, `char32_t`, `wchar_t`, `unsigned short`, `short`, `unsigned int`, `int`, `unsigned long`, `long`, `unsigned long long`, `long long`, `float`, `double`, `long double`, `bool`, `void`, `decltype(nullptr)`
-    * Are both reference and value types supported?
-        * Yes. Primitive data types are passed by value to functions, but can be passed by reference if their addresses are sent instead. Pointers can also be sent for objects, structs, etc.
+* What types does the language support?
+    * `unsigned char`, `char`, `char16_t`, `char32_t`, `wchar_t`, `unsigned short`, `short`, `unsigned int`, `int`, `unsigned long`, `long`, `unsigned long long`, `long long`, `float`, `double`, `long double`, `bool`, `void`, `decltype(nullptr)`
+* Are both reference and value types supported?
+    * Yes. Primitive data types are passed by value to functions, but can be passed by reference if their addresses are sent instead. Pointers can also be sent for objects, structs, etc.
 
-        ```c++
-        int main() {
-            int a = 6;
-            int b = 5;
+    ```c++
+    int main() {
+        int a = 6;
+        int b = 5;
 
-            int sum = add(a, b);
-            int diff = subtract(&a, &b);
-        }
+        int sum = add(a, b);
+        int diff = subtract(&a, &b);
+    }
 
-        // Pass by value
-        int add(int a, int b) {
-            return a + b;
-        }
+    // Pass by value
+    int add(int a, int b) {
+        return a + b;
+    }
 
-        // Pass by reference
-        int subtract(int *a, int *b) {
-            return a - b;
-        }
-        ```
+    // Pass by reference
+    int subtract(int *a, int *b) {
+        return a - b;
+    }
+    ```
 
-    * Can new value types be created?
-        * Structs hold data elements known as *members*.
+* Can new value types be created?
+    * Structs hold data elements known as *members*.
 
-        ```c++
-        struct shirt {
-            char size;
-            int price;
-        };
-        ```
+    ```c++
+    struct shirt {
+        char size;
+        int price;
+    };
+    ```
 
-        * Unions look similar to structs, but all of their members share the same space in memory. Modifying one of the members will affect all the other members.
+    * Unions look similar to structs, but all of their members share the same space in memory. Modifying one of the members will affect all the other members.
 
-        ```c++
-        union shirt {
-            char size;
-            int price;
-        };
-        ```
+    ```c++
+    union shirt {
+        char size;
+        int price;
+    };
+    ```
 
-        * Enumerated types (enums) are used to restrict the possible values for a field.
+    * Enumerated types (enums) are used to restrict the possible values for a field.
 
-        ```c++
-        enum coins {penny, nickel, dime, quarter};
+    ```c++
+    enum coins {penny, nickel, dime, quarter};
         ```
 
 #### Classes
